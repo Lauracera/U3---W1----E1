@@ -18,7 +18,7 @@
       <hr />
     </header>
 
-    <form class="mt-4 formPlayer">
+    <form class="mt-4 formPlayer" onsubmit="checkWinner()">
       <div class="row"></div>
       <div class="mb-3 col-auto">
         <label for="text" class="num1">Numero giocatore 1</label>
@@ -33,13 +33,13 @@
       </div>
 
       <div>
-        <button class="btn btn-primary">Vai!</button>
+        <button type="submit" class="btn btn-primary">Vai!</button>
         <hr />
       </div>
     </form>
     <div id="randomDiv">
       <h2 id="randomNumber"></h2>
-      <p id="pn"></p>
+      <p id="text"></p>
     </div>
     <script src="./script.js"></script>
   </body>

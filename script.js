@@ -1,34 +1,31 @@
 // let num1: number = 3
 // let num2: number = 2
-var Player1 = document.getElementsByClassName(".num1");
-var Player2 = document.getElementsByClassName(".num2");
-var btn = document.getElementsByClassName(".btn");
-var form = document.getElementsByClassName(".formPlayer");
-// form.onsubmit(); { 
-//     if (Player1.value === "" && Player2.value === "") {
-//         alert("Inserisci un numero")
-// //     } 
-// // }
-//     const getRandomNumber = function (min: number, max : number): number {
-//     return Math.floor(Math.random() * (max - min)+ min) 
-// }
-// const randomDiv = document.getElementById("randomDiv")
-//  const randomNumber: any= document.getElementById("randomNumber")
-//  randomNumber.innerHTML = 
-//  console.log(randomNumber)
-// randomDiv.appendChild(randomNumber)
-// console.log(randomDiv)
-//  console.log(getRandomNumber(1, 100))
+var btn = document.getElementsByClassName("btn");
+var form = document.getElementsByClassName("formPlayer");
 var randomNumber = Math.floor(Math.random() * (100 - 1) + 1);
 console.log(randomNumber);
 var getRandomNumber = function () {
     return Math.floor(Math.random() * (100 - 1) + 1);
 };
 var checkWinner = function () {
-    var Player1 = getRandomNumber();
+    //  let Player1: number = getRandomNumber(); 
+    //  console.log("Giocatore 1:", Player1);
+    //  let Player2: number = getRandomNumber(); 
+    //  console.log("Giocatore 2:", Player2);
+    var num1 = document.getElementsByClassName("num1");
+    var num2 = document.getElementsByClassName("num2");
+    var Player1 = num1.value;
     console.log("Giocatore 1:", Player1);
-    var Player2 = getRandomNumber();
+    var Player2 = num2.value;
     console.log("Giocatore 2:", Player2);
+    var randomDiv = document.getElementById("randomDiv");
+    var randomNumber = document.getElementById("randomNumber");
+    randomNumber.value = 80;
+    console.log(randomNumber);
+    var text = document.getElementById("text");
+    randomDiv.appendChild(text);
+    randomDiv.appendChild(randomNumber);
+    console.log(randomDiv);
     var diffPlayer1 = Math.abs(Player1 - randomNumber);
     var diffPlayer2 = Math.abs(Player2 - randomNumber);
     if (Player1 === randomNumber) {
